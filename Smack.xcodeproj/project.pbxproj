@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F41012941FF0C35200005C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41012931FF0C35200005C35 /* AppDelegate.swift */; };
-		F41012961FF0C35200005C35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41012951FF0C35200005C35 /* ViewController.swift */; };
 		F41012991FF0C35200005C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41012971FF0C35200005C35 /* Main.storyboard */; };
 		F410129B1FF0C35200005C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F410129A1FF0C35200005C35 /* Assets.xcassets */; };
 		F410129E1FF0C35200005C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410129C1FF0C35200005C35 /* LaunchScreen.storyboard */; };
 		F43E82171FF374E400261F0E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43E82151FF374E400261F0E /* SWRevealViewController.m */; };
+		F43E821D1FF41FB100261F0E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E821C1FF41FB100261F0E /* ChatVC.swift */; };
+		F43E821F1FF41FC000261F0E /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E821E1FF41FC000261F0E /* ChannelVC.swift */; };
 		FB51D840437C7A592E688751 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7CAFB55A06BDC794AFF325 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +23,6 @@
 		43F3E9D042585C636361828E /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		F41012901FF0C35200005C35 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41012931FF0C35200005C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F41012951FF0C35200005C35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F41012981FF0C35200005C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F410129A1FF0C35200005C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F410129D1FF0C35200005C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +30,9 @@
 		F43E82141FF374E300261F0E /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		F43E82151FF374E400261F0E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		F43E82161FF374E400261F0E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		F43E82181FF376C500261F0E /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		F43E821C1FF41FB100261F0E /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		F43E821E1FF41FC000261F0E /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +85,11 @@
 		F41012921FF0C35200005C35 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				F43E821B1FF41F8E00261F0E /* Model */,
+				F43E821A1FF41F8900261F0E /* View */,
+				F43E82191FF41F8100261F0E /* Controller */,
 				F43E82131FF3749800261F0E /* Supporting Files */,
 				F41012931FF0C35200005C35 /* AppDelegate.swift */,
-				F41012951FF0C35200005C35 /* ViewController.swift */,
 				F41012971FF0C35200005C35 /* Main.storyboard */,
 				F410129A1FF0C35200005C35 /* Assets.xcassets */,
 				F410129C1FF0C35200005C35 /* LaunchScreen.storyboard */,
@@ -97,10 +102,34 @@
 			isa = PBXGroup;
 			children = (
 				F43E82161FF374E400261F0E /* SWRevealViewController.h */,
+				F43E82181FF376C500261F0E /* SWRevealViewController.h */,
 				F43E82151FF374E400261F0E /* SWRevealViewController.m */,
 				F43E82141FF374E300261F0E /* Smack-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F43E82191FF41F8100261F0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F43E821C1FF41FB100261F0E /* ChatVC.swift */,
+				F43E821E1FF41FC000261F0E /* ChannelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F43E821A1FF41F8900261F0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F43E821B1FF41F8E00261F0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41012961FF0C35200005C35 /* ViewController.swift in Sources */,
+				F43E821F1FF41FC000261F0E /* ChannelVC.swift in Sources */,
+				F43E821D1FF41FB100261F0E /* ChatVC.swift in Sources */,
 				F41012941FF0C35200005C35 /* AppDelegate.swift in Sources */,
 				F43E82171FF374E400261F0E /* SWRevealViewController.m in Sources */,
 			);
