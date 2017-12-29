@@ -18,6 +18,7 @@
 		F4797C1D1FF44714007A216F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4797C1C1FF44714007A216F /* Constants.swift */; };
 		F4797C1F1FF44D30007A216F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4797C1E1FF44D30007A216F /* LoginVC.swift */; };
 		F4797C211FF44F23007A216F /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4797C201FF44F23007A216F /* CreateAccountVC.swift */; };
+		F47AD8A81FF5CA3200403837 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47AD8A71FF5CA3200403837 /* RoundedButton.swift */; };
 		F4EB10671FF5A5DB0040ACD9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EB10661FF5A5DB0040ACD9 /* AuthService.swift */; };
 		FB51D840437C7A592E688751 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7CAFB55A06BDC794AFF325 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		F4797C1C1FF44714007A216F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4797C1E1FF44D30007A216F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F4797C201FF44F23007A216F /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		F47AD8A71FF5CA3200403837 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		F4EB10661FF5A5DB0040ACD9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F43E82201FF42ADC00261F0E /* GradientView.swift */,
+				F47AD8A71FF5CA3200403837 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43E821F1FF41FC000261F0E /* ChannelVC.swift in Sources */,
+				F47AD8A81FF5CA3200403837 /* RoundedButton.swift in Sources */,
 				F43E821D1FF41FB100261F0E /* ChatVC.swift in Sources */,
 				F4797C211FF44F23007A216F /* CreateAccountVC.swift in Sources */,
 				F4EB10671FF5A5DB0040ACD9 /* AuthService.swift in Sources */,

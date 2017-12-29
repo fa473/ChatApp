@@ -43,6 +43,7 @@ class AuthService {
     
     func registerUser(email: String, password: String,
                       completion: @escaping CompletionHandler) {
+        
         let lowerCaseEmail = email.lowercased()
         
         let header = [
@@ -57,6 +58,7 @@ class AuthService {
         Alamofire.request(URL_REGISTER, method: .post, parameters: body,
                           encoding: JSONEncoding.default,
                           headers: header).responseString { (response) in
+                            
                             if response.result.error == nil {
                                 completion(true)
                             } else {
@@ -65,5 +67,4 @@ class AuthService {
                             }
         }
     }
-    
 }
