@@ -17,7 +17,6 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Variables
     var avatarType = AvatarType.dark
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
