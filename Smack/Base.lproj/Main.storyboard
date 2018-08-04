@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -266,7 +260,7 @@
                         <outlet property="userImg" destination="JH0-sl-JAi" id="S2L-wa-WOY"/>
                         <outlet property="usernameTxt" destination="ikW-Mo-Tp8" id="AO2-24-W0u"/>
                         <segue destination="v2c-cv-9Af" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="h3u-6s-F3l"/>
-                        <segue destination="9oC-Js-8CU" kind="show" identifier="toAvatarPicker" action="showDetailViewController:sender:" id="bNp-tO-g0I"/>
+                        <segue destination="9oC-Js-8CU" kind="show" identifier="toAvatarPicker" id="bNp-tO-g0I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVV-g6-dge" userLabel="First Responder" sceneMemberID="firstResponder"/>
