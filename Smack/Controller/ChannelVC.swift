@@ -31,6 +31,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                                selector: #selector(ChannelVC.userDataDidChange(_:)),
                                                name: NOTIF_USER_DATA_DID_CHANGE,
                                                object: nil)
+
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -65,15 +71,15 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             userImg.backgroundColor =
                 UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
-//            MessageService.instance.findAllChannels { (success) in
-//                self.tableView.reloadData()
-//            }
+            MessageService.instance.findAllChannels { (success) in
+                self.tableView.reloadData()
+            }
         } else {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
-//            MessageService.instance.channels = [Channel]()
-//            tableView.reloadData()
+            MessageService.instance.channels = [Channel]()
+            tableView.reloadData()
         }
     }
 

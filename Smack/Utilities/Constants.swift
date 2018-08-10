@@ -11,11 +11,11 @@ import Foundation
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL Constants
-let BASE_URL = "http://localhost:3030/"
-let URL_LOGIN = "\(BASE_URL)authentication"
-let URL_USER_ADD = "\(BASE_URL)users"
-let URL_USER_BY_EMAIL = "\(BASE_URL)users"
-let URL_GET_CHANNELS = "\(BASE_URL)channel"
+let BASE_URL = "http://localhost:3030"
+let URL_LOGIN = "\(BASE_URL)/authentication"
+let URL_USER_ADD = "\(BASE_URL)/users"
+let URL_USER_BY_EMAIL = "\(BASE_URL)/users"
+let URL_GET_CHANNELS = "\(BASE_URL)/channel"
 
 // Colors
 let smackPurplePlaceholder = #colorLiteral(red: 0.2588235294, green: 0.3294117647, blue: 0.7254901961, alpha: 0.5046553938)

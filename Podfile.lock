@@ -1,28 +1,54 @@
 PODS:
   - Alamofire (4.7.3)
-  - Socket.IO-Client-Swift (12.1.3):
-    - Starscream (~> 2.1.1)
-  - Starscream (2.1.1)
+  - Feathers (5.3.0):
+    - Feathers/Core (= 5.3.0)
+  - Feathers/Core (5.3.0):
+    - KeychainSwift
+    - ReactiveSwift
+    - Result
+  - FeathersSwiftSocketIO (4.0.0):
+    - FeathersSwiftSocketIO/Core (= 4.0.0)
+  - FeathersSwiftSocketIO/Core (4.0.0):
+    - Feathers
+    - Result
+    - Socket.IO-Client-Swift
+  - KeychainSwift (11.0.0)
+  - ReactiveSwift (4.0.0):
+    - Result (~> 4.0)
+  - Result (4.0.0)
+  - Socket.IO-Client-Swift (13.3.0):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.5)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire
-  - Socket.IO-Client-Swift (~> 12.1.3)
+  - FeathersSwiftSocketIO
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Feathers
+    - FeathersSwiftSocketIO
+    - KeychainSwift
+    - ReactiveSwift
+    - Result
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Socket.IO-Client-Swift: 2d3838d0e7bc105626872081fb6a23141145e8f8
-  Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
+  Feathers: d88238d23a6a2e2f80bc9c239e58ee3a04b8de5f
+  FeathersSwiftSocketIO: 079472bcd0cf76df497e1fc28785d76e871b1beb
+  KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
+  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  Socket.IO-Client-Swift: 0afb192a562db90d50e3f7f7421c06925a3f0179
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: ac0034fc2d59af6b3fa03071998b312f47c7aa43
+PODFILE CHECKSUM: 57751169bbcb10b8b3bb939eb47ed1aa506f2368
 
 COCOAPODS: 1.5.3

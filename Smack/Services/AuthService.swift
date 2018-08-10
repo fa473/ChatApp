@@ -116,14 +116,24 @@ class AuthService {
                           encoding: JSONEncoding.default,
                           headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
+
                 guard let data = response.data else { return }
                 do {
                     let json = try JSON(data: data)
-                    UserDataService.instance.setUserData(id: json["data"][0]["_id"].stringValue,
-                                                         avatarColor: json["data"][0]["avatarColor"].stringValue,
-                                                         avatarName: json["data"][0]["avatarName"].stringValue,
-                                                         email: json["data"][0]["email"].stringValue,
-                                                         name: json["data"][0]["name"].stringValue)
+                    let user = json["data"][0]
+
+                    // Parse JSON
+                    let id = user["_id"].stringValue
+                    let avatarColor = user["avatarColor"].stringValue
+                    let avatarName = user["avatarName"].stringValue
+                    let email = user["email"].stringValue
+                    let name = user["name"].stringValue
+                    // Populate user info
+                    UserDataService.instance.setUserData(id: id,
+                                                         avatarColor: avatarColor,
+                                                         avatarName: avatarName,
+                                                         email: email,
+                                                         name: name)
                 } catch {
                     debugPrint(error)
                 }
