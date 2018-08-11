@@ -71,6 +71,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             userImg.backgroundColor =
                 UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+            MessageService.instance.channels = [Channel]()
             MessageService.instance.findAllChannels { (success) in
                 self.tableView.reloadData()
             }
