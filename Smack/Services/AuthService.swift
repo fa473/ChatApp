@@ -96,7 +96,7 @@ class AuthService {
                 guard let data = response.data else { return }
                 do {
                     let json = try JSON(data: data)
-                    self.userEmail = json["user"]["email"].stringValue
+                    self.userEmail = json["email"].stringValue
                     self.authToken = json["accessToken"].stringValue
                 } catch {
                     debugPrint(error)
@@ -116,12 +116,10 @@ class AuthService {
                           encoding: JSONEncoding.default,
                           headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-
                 guard let data = response.data else { return }
                 do {
                     let json = try JSON(data: data)
                     let user = json["data"][0]
-
                     // Parse JSON
                     let id = user["_id"].stringValue
                     let avatarColor = user["avatarColor"].stringValue
