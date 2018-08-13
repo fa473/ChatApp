@@ -21,6 +21,7 @@
 		F43E821D1FF41FB100261F0E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E821C1FF41FB100261F0E /* ChatVC.swift */; };
 		F43E821F1FF41FC000261F0E /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E821E1FF41FC000261F0E /* ChannelVC.swift */; };
 		F43E82211FF42ADC00261F0E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E82201FF42ADC00261F0E /* GradientView.swift */; };
+		F473D0C6212106A200F502B0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473D0C5212106A200F502B0 /* Message.swift */; };
 		F4797C1A1FF44455007A216F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4797C191FF44455007A216F /* SWRevealViewController.m */; };
 		F4797C1D1FF44714007A216F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4797C1C1FF44714007A216F /* Constants.swift */; };
 		F4797C1F1FF44D30007A216F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4797C1E1FF44D30007A216F /* LoginVC.swift */; };
@@ -55,6 +56,7 @@
 		F43E821C1FF41FB100261F0E /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		F43E821E1FF41FC000261F0E /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		F43E82201FF42ADC00261F0E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F473D0C5212106A200F502B0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F4797C181FF44455007A216F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F4797C191FF44455007A216F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F4797C1C1FF44714007A216F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C5C0711FF9A1BA00154C5C /* Channel.swift */,
+				F473D0C5212106A200F502B0 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				F43E821F1FF41FC000261F0E /* ChannelVC.swift in Sources */,
 				F43899621FF7615B0080B5E1 /* AvatarPickerVC.swift in Sources */,
 				F47AD8A81FF5CA3200403837 /* RoundedButton.swift in Sources */,
+				F473D0C6212106A200F502B0 /* Message.swift in Sources */,
 				F4C5C0721FF9A1BA00154C5C /* Channel.swift in Sources */,
 				F4FD07581FF88829002D129C /* CircleImage.swift in Sources */,
 				F4C5C0701FF9A18E00154C5C /* MessageService.swift in Sources */,
