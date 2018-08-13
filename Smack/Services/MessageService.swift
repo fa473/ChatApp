@@ -47,7 +47,7 @@ class MessageService {
                 self.clearMessages()
                 guard let data = response.data else {return}
                 if let json = try? JSON(data: data) {
-                    for item in json.arrayValue {
+                    for item in json["data"].arrayValue {
                         let messageBody = item["messageBody"].stringValue
                         let channelId = item["channelId"].stringValue
                         let userName = item["userName"].stringValue
