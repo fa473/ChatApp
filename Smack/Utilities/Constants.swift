@@ -11,7 +11,7 @@ import Foundation
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL Constants
-let BASE_URL = "http://localhost:3030"
+let BASE_URL = "https://secure-cove-69614.herokuapp.com"
 let URL_LOGIN = "\(BASE_URL)/authentication"
 let URL_USER_ADD = "\(BASE_URL)/users"
 let URL_USER_BY_EMAIL = "\(BASE_URL)/users"
