@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Feathers
-import FeathersSwiftSocketIO
-import ReactiveSwift
+//import Feathers
+//import FeathersSwiftSocketIO
+//import ReactiveSwift
 import SocketIO
 
 class SocketService: NSObject {
@@ -20,8 +20,8 @@ class SocketService: NSObject {
         super.init()
     }
 
-    // let manager = SocketManager(socketURL: URL(string: BASE_URL)!)
-    let manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(false), .compress])
+    let manager = SocketManager(socketURL: URL(string: BASE_URL)!)
+    //let manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(false), .compress])
     lazy var socket: SocketIOClient = manager.defaultSocket
 
     func establishConnection() {

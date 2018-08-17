@@ -18,6 +18,7 @@ class MessageService {
     var selectedChannel : Channel?
     var unreadChannels = [String]()
 
+    // Find all channels and add them to array
     func findAllChannels(completion: @escaping CompletionHandler) {
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON
         { (response) in
@@ -41,6 +42,7 @@ class MessageService {
         }
     }
 
+    // get all messages for a channel with given id, add them to array
     func findAllMessagesForChannel(channelId: String, completion: @escaping CompletionHandler){
         Alamofire.request("\(URL_GET_MESSAGES)?channelId=\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {(response) in
 

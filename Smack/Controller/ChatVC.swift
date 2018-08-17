@@ -21,14 +21,17 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.bindToKeyboard()
+        view.bindToKeyboard() // Keeps the messageTxtBox above the keyboard
         tableView.delegate = self
         tableView.dataSource = self
+
+        channelNameLbl.text = "Please Log In"
 
         // Allow automatic resizing of cells in order to display longer messages
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         sendBtn.isHidden = true
+
 
         // Toggle menu when button tapped
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
@@ -43,14 +46,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
 
+
+        // Add new message to array and scroll tableview to bottom
         SocketService.instance.getChatMessage { (newMessage) in
             if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
                 MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
-                if MessageService.instance.messages.count > 0 {
-                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
-                }
+                self.scrollToLastRow()
             }
         }
 
@@ -81,6 +83,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
 
+        // If logged in, populate user info
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
@@ -100,18 +103,25 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @objc func channelSelected(_ notif: Notification) {
         updateWithChannel()
-
     }
 
     @objc func handleTap() {
         view.endEditing(true)
     }
 
+    // If there are messages, scroll to the end of the list
+    func scrollToLastRow() {
+        if MessageService.instance.messages.count > 0 {
+            let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+            self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+        }
+    }
+
+    // Update channel title and load messages for that channel
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
         getMessages()
-
     }
 
     // Only show the send button if user has entered text
@@ -158,11 +168,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    // Load messages for selected channel
     func getMessages() {
         guard let channelId = MessageService.instance.selectedChannel?.id else { return }
         MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
             if success {
                 self.tableView.reloadData()
+                self.scrollToLastRow()
             }
 
         }

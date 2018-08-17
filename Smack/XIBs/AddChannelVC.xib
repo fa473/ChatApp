@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddChannelVC" customModule="Smack" customModuleProvider="target">
             <connections>
@@ -33,10 +27,10 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dku-Ux-ljI">
-                    <rect key="frame" x="20" y="80" width="335" height="320"/>
+                    <rect key="frame" x="20" y="40" width="335" height="280"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-Rm-anF" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
-                            <rect key="frame" x="42" y="250" width="250" height="50"/>
+                            <rect key="frame" x="42" y="210" width="250" height="50"/>
                             <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="Fej-o5-t4h"/>
@@ -67,7 +61,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ypp-Dd-wJi">
-                            <rect key="frame" x="42.5" y="107" width="250" height="86"/>
+                            <rect key="frame" x="42.5" y="87" width="250" height="86"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1v-td-Pqs">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
@@ -114,7 +108,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="320" id="5qp-Zb-71n"/>
+                        <constraint firstAttribute="height" constant="280" id="5qp-Zb-71n"/>
                         <constraint firstItem="6z0-vP-bJk" firstAttribute="centerX" secondItem="dku-Ux-ljI" secondAttribute="centerX" id="6Ad-1Z-97K"/>
                         <constraint firstAttribute="trailing" secondItem="6g0-iJ-L9A" secondAttribute="trailing" constant="8" id="D55-OR-Ncg"/>
                         <constraint firstItem="6z0-vP-bJk" firstAttribute="top" secondItem="dku-Ux-ljI" secondAttribute="top" constant="40" id="HDk-2k-354"/>
@@ -133,7 +127,7 @@
                 <constraint firstAttribute="bottom" secondItem="yOf-8q-vEt" secondAttribute="bottom" id="DG0-IG-QG2"/>
                 <constraint firstAttribute="trailing" secondItem="yOf-8q-vEt" secondAttribute="trailing" id="HqI-ch-89E"/>
                 <constraint firstAttribute="trailing" secondItem="dku-Ux-ljI" secondAttribute="trailing" constant="20" id="Rdv-jz-Vrg"/>
-                <constraint firstItem="dku-Ux-ljI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="dCf-mv-00f"/>
+                <constraint firstItem="dku-Ux-ljI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="dCf-mv-00f"/>
                 <constraint firstItem="dku-Ux-ljI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="v76-AL-VWF"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="54.5"/>

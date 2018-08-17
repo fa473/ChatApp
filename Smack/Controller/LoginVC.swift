@@ -41,21 +41,27 @@ class LoginVC: UIViewController {
         }
     }
 
-        @IBAction func closePressed(_ sender: Any) {
-            dismiss(animated: true, completion: nil)
-        }
-
-        @IBAction func createAccntBtnPressed(_ sender: Any) {
-            performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
-        }
-
-        func setupView() {
-            spinner.isHidden = true
-            usernameTxt.attributedPlaceholder =
-                NSAttributedString(string: "username",
-                                   attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-            passwordTxt.attributedPlaceholder =
-                NSAttributedString(string: "password",
-                                   attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-        }
+    @IBAction func closePressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func createAccntBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+    }
+
+    func setupView() {
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder =
+            NSAttributedString(string: "username",
+                               attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        passwordTxt.attributedPlaceholder =
+            NSAttributedString(string: "password",
+                               attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+}

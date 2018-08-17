@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Show LoginVC if not currently logged in
+        if (!AuthService.instance.isLoggedIn){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "login")
+            window?.makeKeyAndVisible()
+            window?.rootViewController?.present(loginVC, animated: true,completion: nil)
+        }
+
         return true
     }
 
@@ -42,7 +49,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         SocketService.instance.closeConnection()
     }
-
-
 }
 

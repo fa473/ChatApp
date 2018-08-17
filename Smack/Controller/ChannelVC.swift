@@ -39,6 +39,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
 
+        // If message is sent to a channel the user is not in, add to unread
         SocketService.instance.getChatMessage { (newMessage) in
             if newMessage.channelId != MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
                 MessageService.instance.unreadChannels.append(newMessage.channelId)
@@ -49,6 +50,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
+        self.tableView.reloadData()
     }
 
     @IBAction func addChannelPressed(_ sender: Any) {
